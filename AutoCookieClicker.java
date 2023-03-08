@@ -8,7 +8,7 @@ public class AutoCookieClicker {
 
     public static void main(String[] args) throws AWTException, InterruptedException {
     	
-    	// PROCEDER CON PRECAUCION
+        // PROCEDER CON PRECAUCION
     	
         Robot robot = new Robot();
         
@@ -25,8 +25,8 @@ public class AutoCookieClicker {
         System.out.println("Ejecutando!...");
         
         while (true) {
-        	// obtiene la posicion del puntero
-        	int mouseX = MouseInfo.getPointerInfo().getLocation().x;
+            // obtiene la posicion del puntero
+            int mouseX = MouseInfo.getPointerInfo().getLocation().x;
             int mouseY = MouseInfo.getPointerInfo().getLocation().y;
            
             Color colorCoordenada = robot.getPixelColor(X, Y);
@@ -35,14 +35,14 @@ public class AutoCookieClicker {
             // si en la coordenada especifica esta la galleta
             if (colorCoordenada.equals(colorGalleta)) {
             	
-            	// y si el mouse esta en la galleta
-            	if ((mouseX >= (X - TOLERANCIA) && mouseX <= (X + TOLERANCIA)) &&
-            			(mouseY >= (Y - TOLERANCIA) && mouseY <= (Y + TOLERANCIA))) {
+                // y si el mouse esta en la galleta
+                if ((mouseX >= (X - TOLERANCIA) && mouseX <= (X + TOLERANCIA)) &&
+                        (mouseY >= (Y - TOLERANCIA) && mouseY <= (Y + TOLERANCIA))) {
             		
-            		// da click
-            		robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+                    // da click
+                    robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
                     robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-            	}
+                }
             	
             }
             
