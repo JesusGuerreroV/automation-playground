@@ -27,7 +27,7 @@ public class AutoCookieClicker {
         while (true) {
             // obtiene la posicion del puntero
             int mouseX = MouseInfo.getPointerInfo().getLocation().x;
-            int mouseY = MouseInfo.getPointerInfo().getLocation().y;
+        	int mouseY = MouseInfo.getPointerInfo().getLocation().y;
            
             Color colorCoordenada = robot.getPixelColor(X, Y);
             Color colorGalleta = new Color(RGB[0], RGB[1], RGB[2]);
